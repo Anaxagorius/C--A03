@@ -1,0 +1,46 @@
+<UserControl x:Class="Assignment03.UserControls.EmployeeInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="400" d:DesignWidth="400">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="20">
+            <TextBlock Text="Employee Information"
+                       FontSize="18" FontWeight="Bold"
+                       Foreground="#1A3A5C" Margin="0,0,0,16"/>
+
+            <TextBlock Text="First Name" Style="{StaticResource EmployeeLabelStyle}"/>
+            <TextBox x:Name="TxtFirstName" Style="{StaticResource EmployeeTextBoxStyle}"/>
+
+            <TextBlock Text="Last Name" Style="{StaticResource EmployeeLabelStyle}"/>
+            <TextBox x:Name="TxtLastName" Style="{StaticResource EmployeeTextBoxStyle}"/>
+
+            <TextBlock Text="Employee Code" Style="{StaticResource EmployeeLabelStyle}"/>
+            <TextBox x:Name="TxtEmployeeCode" Style="{StaticResource EmployeeTextBoxStyle}"/>
+
+            <TextBlock Text="Department" Style="{StaticResource EmployeeLabelStyle}"/>
+            <TextBox x:Name="TxtDepartment" Style="{StaticResource EmployeeTextBoxStyle}"/>
+
+            <TextBlock Text="Email" Style="{StaticResource EmployeeLabelStyle}"/>
+            <TextBox x:Name="TxtEmail" Style="{StaticResource EmployeeTextBoxStyle}"/>
+
+            <!-- Validation error message -->
+            <TextBlock x:Name="TxtValidationError"
+                       Foreground="Red" FontStyle="Italic"
+                       Margin="0,6,0,0" Visibility="Collapsed"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,16,0,0">
+                <Button Content="Save"
+                        Style="{StaticResource EmployeeButtonStyle}"
+                        Margin="0,0,8,0"
+                        Click="BtnSave_Click"/>
+                <Button Content="Cancel"
+                        Style="{StaticResource EmployeeButtonStyle}"
+                        Background="#6C757D"
+                        Click="BtnCancel_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
