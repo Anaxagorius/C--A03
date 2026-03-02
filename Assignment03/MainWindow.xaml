@@ -1,0 +1,40 @@
+﻿<Window x:Class="Assignment03.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:uc="clr-namespace:Assignment03.UserControls"
+        mc:Ignorable="d"
+        Title="PROG 2500 – Assignment 03" Height="520" Width="780"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left navigation pane -->
+        <StackPanel Grid.Column="0" Background="#1A3A5C" Margin="0">
+            <TextBlock Text="Navigation" Foreground="White"
+                       FontWeight="Bold" FontSize="13"
+                       Padding="14,16,14,8"/>
+
+            <Button Content="Employee Details"
+                    Style="{StaticResource NavButtonStyle}"
+                    Click="BtnEmployee_Click"/>
+
+            <Button Content="Support Staff Details"
+                    Style="{StaticResource NavButtonStyle}"
+                    Click="BtnSupportStaff_Click"/>
+
+            <Button Content="Q2 – Data Binding Demo"
+                    Style="{StaticResource NavButtonStyle}"
+                    Click="BtnBindingDemo_Click"/>
+        </StackPanel>
+
+        <!-- Right content pane — hosts the selected UserControl -->
+        <ContentControl x:Name="ContentArea" Grid.Column="1" Margin="0"/>
+    </Grid>
+</Window>
+
